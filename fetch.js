@@ -3,7 +3,7 @@ const container = document.querySelector(".games");
 
 async function fetchGameData() {
     try {
-        const response = await fetch("http://localhost:3000/api/games?steamid=76561199387600663");
+        const response = await fetch("https://steam-api-swart.vercel.app/api/games?steamid=76561199387600663");
         const data = await response.json();
 
         console.log(data);
