@@ -1,0 +1,168 @@
+/*CABECALHO*/
+
+header {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3rem;
+    height: 5rem;
+
+    background-image: linear-gradient(180deg, var(--setup-hi), var(--setup-lo));
+    border-bottom: 3px solid var(--orange);
+}
+
+header p {
+    font-size: 26px;
+    font-family: Tahoma, sans-serif;
+    font-weight: 800;
+
+    color: var(--face);
+}
+
+/*SETUP PAI*/
+
+.setup {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    height: calc(100vh - 5rem);
+    padding: 3rem;
+
+    background: linear-gradient(180deg, var(--setup-hi), var(--setup-lo));
+    color: var(--face);
+}
+
+/*ASIDE*/
+
+.setup aside {
+    flex: 0 0 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.setup aside ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    font-weight: 400;
+}
+
+.setup aside li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.setup aside li::before {
+    content: "";
+    flex: none;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../public/imgs/icons/step-pending.svg");
+}
+
+.setup aside li[aria-current]::before {
+    background-image: url("../../public/imgs/icons/step-current.svg");
+}
+
+.setup aside li:has(~ [aria-current])::before {
+    background-image: url("../../public/imgs/icons/step-done.svg");
+}
+
+.setup aside a {
+    color: var(--face);
+}
+
+/*CARD FORMULARIO*/
+
+.setup main {
+    flex: 1;
+    max-width: 40rem;
+    align-self: flex-start;
+    min-height: 26rem;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--face);
+    color: black;
+
+    border-radius: 3px;
+    border: 3px solid var(--pane-ink);
+}
+
+.setup h1 {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.setup form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+/*CAMPOS*/
+
+.credentials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.avatars {
+    display: flex;
+    gap: 8px;
+    border: 0;
+}
+
+.avatars label {
+    position: relative;
+    margin-top: 0.3rem;
+}
+
+.avatars input {
+    position: absolute;
+    opacity: 0;
+}
+
+.avatars img {
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+
+    border: 1px solid var(--field-edge);
+    background: var(--white);
+}
+
+.avatars input:checked+img {
+    border: 2px solid var(--select);
+    box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+.avatars input:focus-visible+img {
+    outline: 2px dotted black;
+}
+
+.avatars legend {
+    font-size: 15px;
+    margin-bottom: 0.3rem;
+}
+
+/*ACOES*/
+.actions {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--field-edge);
+}
+
+p[role="status"]{
+    color: var(--close);
+}
