@@ -1,0 +1,140 @@
+.window {
+    margin: 0;
+    left: 8rem;
+    top: 2rem;
+    width: min(46rem, 90%);
+    height: min(32rem, 80%);
+    padding: 0;
+
+    background: var(--face);
+    color: black;
+    border: 3px solid var(--luna-edge);
+    border-top: 0;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 2px 3px 10px rgb(0 0 0 / 0.45);
+}
+
+.window[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.window__bar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+    padding: 0 4px 0 8px;
+
+    color: var(--white);
+    font: 700 13px "Trebuchet MS", Tahoma, sans-serif;
+    text-shadow: 1px 1px var(--luna-edge);
+
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(180deg, var(--luna-hi), var(--luna) 12%, var(--luna) 85%, var(--luna-edge));
+}
+
+.window__bar h2 {
+    font: inherit;
+}
+
+.window__close {
+    width: 21px;
+    height: 21px;
+
+    color: var(--white);
+    font: 700 14px/1 Tahoma, sans-serif;
+    cursor: pointer;
+
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--close) 70%, white), var(--close));
+}
+
+.window__body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    background: var(--white);
+}
+
+.window--steam .window__body {
+    background: var(--steam-navy);
+    color: var(--steam-mist);
+}
+
+.window--explorer .window__body{
+    display: flex;
+    overflow: hidden;
+}
+
+.window__list {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+.window__status {
+    display: flex;
+    flex: none;
+    gap: 1rem;
+    padding: 3px 8px;
+    border-top: 1px solid var(--field-edge);
+    background: var(--face); 
+}
+
+.pane {
+    flex: 0 0 11rem;
+    padding: 0.75rem 0.5rem;
+    background: linear-gradient(180deg, var(--pane), var(--pane-lo));
+}
+
+.pane h3 {
+    padding: 4px 8px;
+    color: var(--pane-ink);
+    font-size: 12px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(90deg, var(--white), var(--pane-hi));
+}
+
+.pane ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    background: color-mix(in srgb, var(--pane-hi) 70%, var(--pane));
+}
+
+.pane button {
+    background: none;
+    color: var(--pane-ink);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.pane button:hover { text-decoration: underline; }
+
+
+.window table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.window th{
+    padding: 3px 8px;
+    text-align: left;
+    font-weight: 400;
+    border-bottom: 1px solid var(--field-edge);
+    background: linear-gradient(180deg, var(--white), var(--face));
+}
+
+.window td {
+    padding: 3px 8px;
+}
+
+.window tbody tr:hover{
+    background: var(--select);
+    color: var(--white);
+}

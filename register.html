@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components/input.css">
+    <link rel="stylesheet" href="css/components/label.css">
+    <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/pages/register.css">
+</head>
+
+<body>
+    <header>
+        <p>Steam <i>XP</i> Setup</p>
+    </header>
+    <div class="setup">
+        <aside>
+            <ol>
+
+                <li>Boas-vindas</li>
+
+                <li aria-current="step">Conta e chave</li>
+
+                <li>Ativação</li>
+
+                <li>Concluir</li>
+            </ol>
+
+            <p>Já tem conta? <a href="login.html">Ir para login</a></p>
+        </aside>
+        <main>
+            <h1>Crie sua conta</h1>
+            <form>
+                <div class="credentials">
+                    <div class="label">
+                        <label for="user">Nome de usuário</label>
+                        <input type="text" id="user" name="username" autocomplete="username" required>
+                    </div>
+                    <div class="label">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" autocomplete="new-password" required>
+                    </div>
+                </div>
+
+                <fieldset class="avatars">
+                    <legend>Escolha uma imagem</legend>
+
+                    <label>
+                        <input type="radio" name="avatar" value="pirate" checked>
+                        <img src="public/imgs/avatars/pirate.png" alt="pirata">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="avatar" value="boy">
+                        <img src="public/imgs/avatars/boy.png" alt="garoto">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="avatar" value="halo">
+                        <img src="public/imgs/avatars/halo.png" alt="Master Chief">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="avatar" value="happy">
+                        <img src="public/imgs/avatars/happy.png" alt="emoji feliz">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="avatar" value="panda">
+                        <img src="public/imgs/avatars/panda.png" alt="panda">
+                    </label>
+                </fieldset>
+
+                <div class="label">
+                    <label for="key">Chave do produto (seu id steam)</label>
+                    <input type="text" id="key" name="steamid" inputmode="numeric" pattern="\d{17}" maxlength="17"
+                        placeholder="xxxxxxxxxxxxxxxxx" required>
+                </div>
+
+                <div>
+                    <p role="status"></p>
+                </div>
+
+                <div class="actions">
+                    <a class="btn" href="index.html">Voltar</a>
+                    <button class="btn" type="submit">Ativar</button>
+                    <a class="btn" href="index.html">Cancelar</a>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script type="module" src="js/pages/register.js"></script>
+</body>
+</html>

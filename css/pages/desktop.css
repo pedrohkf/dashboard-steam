@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.desktop {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    background: url("../../public/imgs/background-wallpaper.png") center / cover no-repeat;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 76px;
+    padding: 4px;
+
+    background: none;
+    color: var(--white);
+    font: inherit;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    cursor: default;
+}
+
+.icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.icon:focus {
+    outline: none;
+}
+
+.icon:focus span {
+    background: var(--select);
+    outline: 1px dotted var(--white);
+    text-shadow: none;
+}
+
+/*STEAM*/
+
+.window--steam {
+    width: min(48rem, 92%);
+    height: min(32rem, 90%);
+}
+
+.window--steam .window__body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.steam-name {
+    padding: 0.5rem 0.75rem;
+    background: var(--steam-ink);
+    color: var(--steam-sky);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    align-content: start;
+    gap: 0.75rem;
+    flex: 1;
+    min-height: 0;
+    padding: 0.75rem;
+    overflow: auto;
+}
+
+.games li {
+    display: flex;
+    flex-direction: column;
+    background: var(--steam-slate);
+
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.games img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 460 / 215;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.game__name {
+    padding: 0.4rem 0.5rem 0;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.game__hours {
+    padding: 0 0.5rem 0.4rem;
+    color: var(--steam-sky);
+}
+
+.window--trash {
+    left: 14rem;
+    top: 5rem;
+    width: min(50rem, 90%);
+    height: min(30rem, 70%);
+}

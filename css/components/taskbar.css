@@ -1,0 +1,117 @@
+.taskbar {
+    display: flex;
+    align-items: stretch;
+    height: 35px;
+    background: linear-gradient(180deg, var(--taskbar-hi), var(--taskbar) 9%, var(--taskbar) 88%, var(--taskbar-lo));
+}
+
+.start {
+    width: 96px;
+    color: var(--white);
+    font: italic 700 17px "Trebuchet MS", Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 0.45);
+    cursor: pointer;
+
+    border-radius: 0 12px 12px 0;
+    background: linear-gradient(180deg, var(--start-hi), var(--start) 25%, var(--start-lo));
+    box-shadow: inset -2px 0 3px rgb(0 0 0 / 0.35), inset 0 2px 2px rgb(255 255 255 / 0.35);
+}
+
+.start:hover {
+    filter: brightness(1.1);
+}
+
+.start:active {
+    filter: brightness(0.9);
+}
+
+.task {
+    display: flex;
+    flex: 1;
+    gap: 2px;
+    padding: 3px 6px;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    color: var(--white);
+    border-left: 1px solid var(--luna-edge);
+    background: linear-gradient(180deg, var(--luna-hu), var(--luna) 12%, var(--luna) 88%, var(--luna-edge));
+    box-shadow: inset 1px 0 var(--luna-hi);
+}
+
+.start-menu {
+    inset: auto auto 35px 0;
+    margin: 0;
+    padding: 0;
+    width: 20rem;
+
+    overflow: hidden;
+    color: black;
+    border: 2px solid var(--luna-edge);
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    background: var(--white);
+}
+
+.start-menu:popover-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-menu__user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+
+    color: var(--white);
+    font: 700 15px var(--font-title);
+    text-shadow: 1px 1px var(--luna-edge);
+    background: linear-gradient(180deg, var(--luna-hi), var(--luna) 15%, var(--luna) 85%, var(--luna-edge));
+}
+
+.start-menu__user img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--white);
+    border-radius: 3px;
+    background: var(--white);
+}
+
+.start-menu__apps button {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 6px 8px;
+    background: none;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.start-menu__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    color: var(--white);
+    background: linear-gradient(180deg, var(--luna), var(--luna-edge));
+}
+
+.start-menu__footer button,
+.start-menu__footer a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}

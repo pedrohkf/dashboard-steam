@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/components/input.css">
+    <link rel="stylesheet" href="css/components/label.css">
+    <link rel="stylesheet" href="css/pages/login.css">
+</head>
+
+<body>
+    <main>
+        <section class="welcome">
+            <p>Para comecar, clique no seu nome de usuário</p>
+        </section>
+
+        <section class="accounts" aria-label="Conta de usuarios">
+            <ul></ul>
+            <p role="alert" hidden>Senha incorreta</p>
+            <a href="register.html">Criar nova conta</a>
+        </section>
+    </main>
+    <footer>
+        <a href="crash.html">
+            <img src="public/imgs/icons/power.svg" alt="">
+            <span>Desligar computador</span>
+        </a>
+        <p>Depois de entrar, você pode adicionar ou alterar contas. Basta abrir o Painel de Controle e clicar em Contas
+            de Usuário</p>
+    </footer>
+
+    <template>
+        <li>
+            <button class="user" type="button" aria-expanded="false">
+                <img src="" alt="">
+                <span></span>
+            </button>
+            <form hidden>
+                <label>Digite sua senha
+                    <input type="password" name="password" autocomplete="current-password" required>
+                </label>
+                <button type="submit" aria-label="Entrar">
+                    <img src="public/imgs/icons/arrow-go.svg" alt="seta">
+                </button>
+            </form>
+        </li>
+    </template>
+
+    <script type="module" src="js/pages/login.js"></script>
+</body>
+
+</html>
