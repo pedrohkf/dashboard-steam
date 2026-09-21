@@ -1,0 +1,70 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+     font-family: var(--font-ui);
+     color: black;
+
+     background: linear-gradient(180deg, var(--sky) 0%, var(--sky-lo) 55%, var(--grass-hi) 55%, var(--grass-lo) 100%);
+     background-attachment: fixed;
+ }
+
+ header {
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0.5rem 1.5rem;
+
+     background: linear-gradient(180deg, var(--taskbar-hi), var(--taskbar) 15%, var(--taskbar-lo));
+     border-bottom: 2px solid var(--luna-edge);
+ }
+
+ .logo img {
+     display: block;
+     height: 2rem;
+ }
+
+ nav ul {
+     display: flex;
+     gap: 0.25rem;
+ }
+
+ nav a {
+     padding: 0.4rem 0.8rem;
+     border-radius: 3px;
+     color: var(--white);
+     text-decoration: none;
+ }
+
+ nav a:hover {
+     background: color-mix(in srgb, var(--white) 25%, transparent);
+ }
+
+ .iniciar {
+     padding: 0.4rem 1.2rem;
+     border-radius: 0 12px 12px 0;
+     background: linear-gradient(180deg, var(--start-hi), var(--start) 50%, var(--start-lo));
+     color: var(--white);
+     font: italic 700 1rem var(--font-title);
+     text-decoration: none;
+ }
+
+ .iniciar:hover {
+     filter: brightness(1.1);
+ }
+
+ main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    width: min(60rem, 100% - 2rem);
+    margin: 2rem auto;
+ }
