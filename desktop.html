@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de trabalho</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/components/window.css">
+    <link rel="stylesheet" href="css/components/taskbar.css">
+    <link rel="stylesheet" href="css/pages/desktop.css">
+</head>
+
+<body>
+    <h1 class="sr-only">Área de trabalho</h1>
+
+    <main class="desktop">
+        <ul class="icons">
+            <li>
+                <button class="icon" type="button" data-open="win-steam">
+                    <img src="public/imgs/icons/steam-48.png" alt="">
+                    <span>Steam</span>
+                </button>
+            </li>
+            <li>
+                <button class="icon" type="button" data-open="win-trash">
+                    <img src="public/imgs/icons/trash-48.png" alt="">
+                    <span>Lixeira</span>
+                </button>
+            </li>
+        </ul>
+        <dialog class="window window--steam" id="win-steam" aria-labelledby="win-steam-title">
+            <header class="window__bar">
+                <h2 id="win-steam-title">Steam</h2>
+                <form method="dialog">
+                    <button class="window__close" aria-label="Fechar">&times;</button>
+                </form>
+            </header>
+            <div class="window__body">
+                <p class="steam-name"></p>
+                <ul class="games"></ul>
+            </div>
+        </dialog>
+
+        <dialog class="window window--explorer window--trash" id="win-trash" aria-labelledby="win-trash-title">
+            <header class="window__bar">
+                <h2 id="win-trash-title">Lixeira</h2>
+                <form method="dialog">
+                    <button class="window__close" aria-label="Fechar">&times;</button>
+                </form>
+            </header>
+            <div class="window__body">
+                <aside class="pane">
+                    <h3>Tarefas da Lixeira</h3>
+                    <ul>
+                        <li><button id="empty-trash">Esvaziar lixeira</button></li>
+                    </ul>
+                </aside>
+                <div class="window__list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Local original</th>
+                                <th scope="col">Sistuação</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <footer class="window__status">
+                <span><output id="trash-count">0</output> itens</span>
+            </footer>
+        </dialog>
+    </main>
+
+    <nav class="taskbar" aria-label="Barra de tarefas">
+        <button class="start" type="button" popovertarget="start-menu">iniciar</button>
+        <ul class="task"></ul>
+        <time class="clock" datetime="">--:--</time>
+    </nav>
+
+    <div class="start-menu" id="start-menu" popover>
+        <header class="start-menu__user">
+            <img alt="">
+            <span></span>
+        </header>
+
+        <ul class="start-menu__apps">
+            <li>
+                <button type="button" data-open="win-steam" popovertarget="start-menu" popovertargetaction="hide">
+                    <img src="public/imgs/icons/steam-48.png" alt="" width="32" height="32">
+                    Steam
+                </button>
+            </li>
+            <li>
+                <button type="button" data-open="win-trash" popovertarget="start-menu" popovertargetaction="hide">
+                    <img src="public/imgs/icons/trash-48.png" alt="" width="32" height="32">
+                    Lixeira
+                </button>
+            </li>
+        </ul>
+
+        <footer class="start-menu__footer">
+            <button type="button" id="logoff">
+                <img src="public/imgs/icons/logoff.svg" alt="">Fazer logoff</button>
+            <a href="crash.html">
+                <img src="public/imgs/icons/power.svg" alt="" width="24" height="24">
+                Desligar computador
+            </a>
+        </footer>
+    </div>
+
+    <template id="game-template">
+        <li><img alt=""><span class="game__name"></span><span class="game__hours"></span></li>
+    </template>
+
+    <template id="trash-template">
+        <tr>
+            <td></td>
+            <td>Steam/Biblioteca</td>
+            <td>Nunca jogado</td>
+        </tr>
+    </template>
+
+    <script type="module" src="js/pages/desktop.js"></script>
+</body>
+
+</html>
