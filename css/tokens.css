@@ -1,0 +1,53 @@
+:root {
+    --luna: #0054E3;
+    --luna-hi: #3D95FF;
+    --luna-edge: #0831D9;
+    --taskbar: #245EDC;
+    --taskbar-hi: #3F8CF3;
+    --taskbar-lo: #1941A5;
+    --pane: #7BA2E7;
+    --pane-lo: #6375D6;
+    --pane-ink: #215DC6;
+    --face: #ECE9D8;
+    --field-edge: #7F9DB9;
+    --btn-edge: #003C74;
+    --start: #3C9E3B;
+    --start-hi: #5FB85A;
+    --start-lo: #2A7A28;
+    --orange: #F0A24A;
+    --close: #D9431F;
+    --select: #316AC5;
+    --sky: #3A78E6;
+    --sky-lo: #9CC3F7;
+    --grass: #4C9A1E;
+    --grass-hi: #8CC63F;
+    --grass-lo: #2E7A0F;
+    --login-bar: #00309C;
+    --login-field: #5A7EDC;
+
+    --bsod: #0000AA;
+
+    /*steam*/
+    --steam-ink: #171A21;
+    --steam-navy: #1B2838;
+    --steam-slate: #2A475E;
+    --steam-sky: #66C0F4;
+    --steam-mist: #C7D5E0;
+
+    --white: #FFFFFF;
+    --pane-hi: #C6D3F7;
+    --focus-ring: #98B8F5;
+    --login-line: #8FA8E6;
+    --setup-hi: #0B3FC0;
+    --setup-lo: #002A8F;
+    --post: #000000;
+    --post-ink: #AAAAAA;
+    --graph: #5CFF5C;
+    --graph-grid: #1B5E1B;
+    --ok: #3A9A2E;
+    --warn: #F2A900;
+
+    --font-ui: Tahoma, "Noto Sans", sans-serif;
+    --font-title: "Trebuchet MS", "Fira Sans", sans-serif;
+    --font-display: "Franklin Gothic Medium", "Libre Franklin", Arial, sans-serif;
+}
