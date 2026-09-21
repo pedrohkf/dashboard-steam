@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Steam XP">
+    <defs>
+        <linearGradient id="barra" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3D95FF"/>
+            <stop offset="1" stop-color="#0054E3"/>
+        </linearGradient>
+    </defs>
+
+    <!-- janela -->
+    <rect x="4" y="6" width="56" height="52" rx="7" fill="#1B2838" stroke="#0054E3" stroke-width="2"/>
+
+    <!-- barra de título -->
+    <path d="M4 13a7 7 0 0 1 7-7h42a7 7 0 0 1 7 7v5H4z" fill="url(#barra)"/>
+
+    <!-- botões da janela: minimizar e fechar -->
+    <rect x="42" y="8.5" width="7" height="7" rx="1.5" fill="#3D95FF" stroke="#fff"/>
+    <rect x="51" y="8.5" width="7" height="7" rx="1.5" fill="#D9431F" stroke="#fff"/>
+
+    <!-- controle -->
+    <path d="M20 30h24a8 8 0 0 1 7.6 5.5l2.4 8a5 5 0 0 1-8.7 4.4L42 44H22l-3.3 3.9a5  1 20 30z" fill="#66C0F4"/>
+
+    <!-- direcional -->
+    <path d="M22 34h2v2.5h2.5v2H24V41h-2v-2.5h-2.5v-2H22z" fill="#1B2838"/>
+
+    <!-- botões de ação -->
+    <circle cx="41" cy="35" r="2" fill="#1B2838"/>
+    <circle cx="46" cy="39" r="2" fill="#1B2838"/>
+</svg>

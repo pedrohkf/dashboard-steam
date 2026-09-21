@@ -22,7 +22,7 @@ async function loadStats(session) {
 
 function restart() {
     clearSession();
-    location.href = "loading.html"
+    location.href = "index.html"
 }
 
 addEventListener("keydown", restart, { once: true });
