@@ -39,7 +39,7 @@
 
     color: var(--white);
     border-left: 1px solid var(--luna-edge);
-    background: linear-gradient(180deg, var(--luna-hu), var(--luna) 12%, var(--luna) 88%, var(--luna-edge));
+    background: linear-gradient(180deg, var(--luna-hi), var(--luna) 12%, var(--luna) 88%, var(--luna-edge));
     box-shadow: inset 1px 0 var(--luna-hi);
 }
 

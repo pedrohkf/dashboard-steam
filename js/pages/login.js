@@ -41,5 +41,5 @@ function openTile(tile) {
     })
 
     error.hidden = true;
-    t.nextElementSibling.querySelector("input").focus();
+    tile.nextElementSibling.querySelector("input").focus();
 }

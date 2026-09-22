@@ -1,10 +1,21 @@
 import { clearSession, getSession } from "../storage.js";
 import { getGames } from "../api.js";
 
+const clock = document.querySelector(".clock");
 const session = getSession();
 
 if (!session) location.replace("login.html");
 else init(session);
+
+
+function updateClock() {
+    const now = new Date();
+    clock.dataTime = now.toISOString();
+    clock.textContent = now.toLocaleDateString("pt-BR", { hour: "2-digit", minute: "2-digit" })
+}
+
+updateClock()
+setInterval(updateClock, 30000)
 
 async function init(session) {
     document.querySelector(".start-menu__user img").src = `public/imgs/avatars/${session.avatar}.png`;
