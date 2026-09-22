@@ -4,6 +4,9 @@ Uma dashboard da Steam disfarçada de Windows XP. Você cria conta com o seu Ste
 
 ![status](https://img.shields.io/badge/status-em%20desenvolvimento-blue) ![licença](https://img.shields.io/badge/uso-educacional-lightgrey)
 
+🔗 **Deploy:** https://dashboard-steam.vercel.app
+📂 **Repositório:** https://github.com/pedrohkf/dashboard-steam
+
 ---
 
 ## Por que Windows XP
