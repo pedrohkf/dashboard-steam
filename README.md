@@ -12,15 +12,13 @@ Windows XP foi meu primeiro sistema operacional. Lá por 2010, com uns 5 anos, e
 
 ## Demo
 
-As telas principais do projeto estão em `public/imgs/prints/` e exibidas na seção "Telas" da home (`index.html`):
+| Loading | Login | Cadastro |
+|---|---|---|
+| ![Boot com barra de progresso azul](public/imgs/prints/loading.png) | ![Seleção de usuário estilo Windows XP](public/imgs/prints/login.png) | ![Assistente de instalação](public/imgs/prints/register.png) |
 
-| Tela | Descrição |
-|---|---|
-| `loading.png` | Boot com barra de progresso azul clássica |
-| `login.png` | Seleção de usuário estilo Windows XP |
-| `register.png` | Assistente de instalação (cadastro) |
-| `desktop-1.png` / `desktop-2.png` | Área de trabalho com janelas da Steam e da Lixeira |
-| `crash.png` | Tela azul de erro (BSOD) com mensagem |
+| Desktop (Steam) | Desktop (Lixeira) | Crash |
+|---|---|---|
+| ![Área de trabalho com a janela da Steam](public/imgs/prints/desktop-2.png) | ![Área de trabalho com a janela da Lixeira](public/imgs/prints/desktop-1.png) | ![Tela azul de erro](public/imgs/prints/crash.png) |
 
 ## Funcionalidades
 
