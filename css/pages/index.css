@@ -9,7 +9,7 @@
      font-family: var(--font-ui);
      color: black;
 
-     background: linear-gradient(180deg, var(--sky) 0%, var(--sky-lo) 55%, var(--grass-hi) 55%, var(--grass-lo) 100%);
+     background: url("../../public/imgs/background-wallpaper.png") center / cover no-repeat;
      background-attachment: fixed;
  }
 
@@ -61,10 +61,280 @@
  }
 
  main {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 2rem;
-    width: min(60rem, 100% - 2rem);
-    margin: 2rem auto;
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     gap: 2rem;
+     width: min(60rem, 100% - 2rem);
+     margin: 2rem auto;
+ }
+
+ main section {
+     padding: 1.5rem 2rem;
+     background: var(--face);
+     border: 3px solid var(--luna-edge);
+     border-radius: 8px;
+     box-shadow: 2px 3px 10px rgb(0 0 0 / 0.35);
+ }
+
+
+ main h2 {
+     margin-bottom: 1rem;
+     color: var(--pane-ink);
+     font-family: var(--font-title);
+ }
+
+ #sobre {
+     max-width: 56rem;
+     margin-inline: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1.1rem;
+     padding: 10rem 2rem 3.5rem;
+     text-align: center;
+     background: none;
+     border: none;
+     box-shadow: none;
+ }
+
+ #sobre h1 {
+     font: 700 clamp(2rem, 5vw, 2.75rem) var(--font-display);
+     color: var(--white);
+     max-width: 32rem;
+     text-shadow: 2px 2px 4px rgb(0 0 0 / 0.35);
+ }
+
+ #sobre p {
+     max-width: 40rem;
+     line-height: 1.65;
+ }
+
+ .btn-hero {
+     min-width: 160px;
+     height: 38px;
+     padding: 0 1.5rem;
+     font: 700 15px var(--font-ui);
+     border-radius: 7px;
+ }
+
+ .telas {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+     gap: 1.5rem;
+ }
+
+ .tela {
+     overflow: hidden;
+     background: var(--white);
+     border: 2px solid var(--luna-edge);
+     border-radius: 6px;
+     box-shadow: 2px 3px 8px rgb(0 0 0 / 0.35);
+ }
+
+ .tela__bar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 22px;
+     padding: 0 4px 0 8px;
+     color: var(--white);
+     font: 700 11px var(--font-title);
+     text-shadow: 1px 1px var(--luna-edge);
+
+     background: linear-gradient(180deg, var(--luna-hi), var(--luna) 12%, var(--luna) 85%, var(--luna-edge));
+ }
+
+ .tela__close {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 15px;
+     height: 15px;
+     font-size: 11px;
+     line-height: 1;
+     border: 1px solid var(--white);
+     border-radius: 2px;
+     background: linear-gradient(135deg, color-mix(in srgb, var(--close) 70%, white), var(--close));
+ }
+
+ .telas img {
+     display: block;
+     width: 100%;
+ }
+
+ .telas figcaption {
+     margin-top: 6px 8px;
+     font-size: 13px;
+     text-align: center;
+ }
+
+ .roadmap {
+     display: flex;
+     overflow-x: auto;
+     padding: 1.6rem 0.5rem 1rem;
+     scrollbar-width: thin;
+     scrollbar-color: var(--pane-ink) var(--face);
+ }
+
+ .roadmap::-webkit-scrollbar {
+     height: 8px;
+ }
+
+ .roadmap::-webkit-scrollbar-track {
+     background: color-mix(in srgb, var(--face) 82%, black);
+     border-radius: 4px;
+ }
+
+ .roadmap::-webkit-scrollbar-thumb {
+     background: var(--pane-ink);
+     border-radius: 4px;
+ }
+
+ .roadmap li {
+     flex: none;
+     width: 6.4rem;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0.3rem;
+     padding-top: 1.5rem;
+ }
+
+ .roadmap li::before {
+     content: "";
+     position: absolute;
+     top: 0.4rem;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background: var(--pane-ink);
+ }
+
+ .roadmap li:first-child::before {
+     left: 50%;
+     width: 50%;
+ }
+
+ .roadmap li:last-child::before {
+     width: 50%;
+ }
+
+ .roadmap li::after {
+     content: "";
+     position: absolute;
+     top: 0.18rem;
+     left: 50%;
+     translate: -50% 0;
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     background: var(--white);
+     border: 3px solid var(--pane-ink);
+ }
+
+ .roadmap span {
+     font-size: 11.5px;
+     text-align: center;
+     color: #333;
+ }
+
+ .roadmap time {
+     font-weight: 700;
+     color: var(--pane-ink);
+     font-size: 12.5px;
+ }
+
+ .roadmap .destaque::after {
+     width: 16px;
+     height: 16px;
+     background: var(--orange);
+     border-color: var(--orange);
+     box-shadow: 0 0 0 4px color-mix(in srgb, var(--orange) 30%, transparent);
+ }
+
+ .roadmap .destaque time,
+ .roadmap .destaque span {
+     color: var(--orange);
+     font-weight: 700;
+ }
+
+ #tecnologias ul {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+     gap: 0.75rem;
+ }
+
+ #tecnologias li {
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     padding: 0.6rem 0.75rem;
+     background: var(--white);
+     border: 1px solid var(--field-edge);
+     border-radius: 4px;
+ }
+
+ .tech-badge {
+     flex: none;
+     width: 40px;
+     height: 40px;
+     border-radius: 6px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: var(--face);
+     border: 1px solid var(--field-edge);
+ }
+
+ .tech-badge img {
+     width: 24px;
+     height: 24px;
+ }
+
+ #tecnologias strong {
+     display: block;
+     font-size: 13.5px;
+ }
+
+ #tecnologias small {
+     color: #444;
+     font-size: 12px;
+ }
+
+ #aviso {
+     background: color-mix(in srgb, var(--face) 85%, black);
+     color: #333;
+     font-size: 13px;
+ }
+
+ #aviso p {
+     line-height: 1.5;
+ }
+
+ footer {
+     display: flex;
+     justify-content: space-between;
+     padding: 0.6rem 1.5rem;
+     background: linear-gradient(180deg, var(--taskbar-hi), var(--taskbar) 15%, var(--taskbar-lo));
+     color: var(--white);
+     font-size: 13px;
+     border-top: 2px solid var(--luna-edge);
+ }
+
+ @media (max-width: 640px) {
+     header {
+         flex-wrap: wrap;
+         row-gap: 0.5rem;
+     }
+
+     nav ul {
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+
+     #sobre {
+         padding: 3rem 1.25rem 2.5rem;
+     }
  }

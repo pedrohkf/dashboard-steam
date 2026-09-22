@@ -5,35 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto XP</title>
+    <link rel="icon" type="image/svg+xml" href="public/imgs/icons/steam-xp.svg">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/components/window.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 
 <body>
     <header>
-        <a href="" class="logo">
+        <a href="#sobre" class="logo">
             <img src="public/imgs/icons/steam-xp.svg" alt="">
         </a>
 
         <nav>
             <ul>
-                <a href="">
-                    <li>Sobre</li>
-                </a>
-                <a href="">
-                    <li>Telas</li>
-                </a>
-                <a href="">
-                    <li>Roadmap</li>
-                </a>
-                <a href="">
-                    <li>Tecnologias</li>
-                </a>
-                <a href="">
-                    <li>Aviso</li>
-                </a>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#telas">Telas</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#aviso">Aviso</a></li>
             </ul>
         </nav>
 
@@ -42,13 +34,13 @@
 
     <main class="topo">
         <section id="sobre">
-            <h1>Steam XP</h1>
+            <h1>Sua Steam no Tema do Windows XP</h1>
             <p>
                 Uma dashboard da Steam disfarçada de Windows XP. Você cria uma conta usando o seu
                 Steam ID, faz login e vê sua biblioteca de jogos dentro de uma área de trabalho retrô.
                 Os jogos que você nunca abriu vão parar na Lixeira.
             </p>
-            <a class="btn" href="register.html">Criar conta</a>
+            <a class="btn btn-hero" href="register.html">Criar conta</a>
         </section>
 
 
@@ -56,28 +48,59 @@
             <h2>Telas do projeto</h2>
 
             <div class="telas">
-                <figure>
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>loading.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
                     <img src="public/imgs/prints/loading.png" alt="Tela de boot com a barra de progresso azul">
                     <figcaption>Loading: a tela de boot</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>login.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
                     <img src="public/imgs/prints/login.png" alt="Tela de login com a lista de usuários">
                     <figcaption>Login: escolha o seu usuário</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>register.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
                     <img src="public/imgs/prints/register.png" alt="Assistente de cadastro com formulário">
                     <figcaption>Cadastro: o assistente de instalação</figcaption>
                 </figure>
 
-                <figure>
-                    <img src="public/imgs/prints/desktop.png" alt="Área de trabalho com janelas da Steam e da Lixeira">
-                    <figcaption>Desktop: biblioteca e Lixeira</figcaption>
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>trash.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
+                    <img src="public/imgs/prints/desktop-1.png"
+                        alt="Área de trabalho com janelas da Steam e da Lixeira">
+                    <figcaption>Desktop: Lixeira</figcaption>
                 </figure>
 
-                <figure>
-                    <img src="public/imgs/prints/crash.png" alt="Tela azul de erro com mensagem bem-humorada">
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>steam.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
+                    <img src="public/imgs/prints/desktop-2.png"
+                        alt="Área de trabalho com janelas da Steam e da Lixeira">
+                    <figcaption>Desktop: Steam biblioteca</figcaption>
+                </figure>
+
+                <figure class="tela">
+                    <div class="tela__bar">
+                        <span>crash.png</span>
+                        <span class="tela__close" aria-hidden="true">x</span>
+                    </div>
+                    <img src="public/imgs/prints/crash.png" alt="Tela azul de erro com mensagem">
                     <figcaption>Crash: a tela azul PLAYTIME_EXCEEDED</figcaption>
                 </figure>
             </div>
@@ -134,17 +157,38 @@
             <h2>Tecnologias</h2>
 
             <ul>
-                <li><strong>HTML5:</strong> estrutura semântica, formulário, listas e tabela</li>
-                <li><strong>CSS3:</strong> variáveis, grid, flexbox e animações</li>
-                <li><strong>JavaScript:</strong> módulos, localStorage, sessionStorage e fetch</li>
-                <li><strong>API da Steam:</strong> biblioteca de jogos e tempo jogado</li>
+                <li>
+                    <span class="tech-badge tech-badge">
+                        <img src="https://cdn.simpleicons.org/html5" alt="HTML5">
+                    </span>
+                    <span><strong>HTML5</strong><small> estrutura semântica, formulário, listas e tabela</small></span>
+                </li>
+                <li>
+                    <span class="tech-badge tech-badge">
+                        <img src="https://cdn.simpleicons.org/css" alt="CSS3">
+                    </span>
+                    <span><strong>CSS3</strong><small> variáveis, grid, flexbox e animações</small></span>
+                </li>
+                <li>
+                    <span class="tech-badge tech-badge">
+                        <img src="https://cdn.simpleicons.org/javascript/332b00" alt="JavaScript">
+                    </span>
+                    <span><strong>JavaScript</strong><small> módulos, localStorage, sessionStorage e fetch</small></span>
+                </li>
+                <li>
+                    <span class="tech-badge tech-badge">
+                        <img src="https://cdn.simpleicons.org/steam" alt="Steam API">
+                    </span>
+                    <span><strong>API da Steam</strong><small> biblioteca de jogos e tempo jogado</small></span>
+                </li>
             </ul>
+
         </section>
 
         <section id="aviso">
             <h2>Aviso</h2>
             <p>
-                Este é um projeto educacional, desenvolvido para a disciplina EXAPE, sem fins
+                Este é um projeto educacional, desenvolvido para a disciplina WEB1 para o EXAPE, sem fins
                 comerciais. Não tem nenhuma afiliação com a Microsoft ou com a Valve.
                 Windows XP, Steam e seus respectivos nomes, marcas e imagens pertencem aos seus donos.
             </p>
