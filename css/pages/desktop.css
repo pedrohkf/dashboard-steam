@@ -119,3 +119,11 @@ body {
     width: min(50rem, 90%);
     height: min(30rem, 70%);
 }
+
+@media (max-width: 640px) {
+    .window--trash {
+        left: 2vw;
+        top: 2.5rem;
+        width: 96vw;
+    }
+}

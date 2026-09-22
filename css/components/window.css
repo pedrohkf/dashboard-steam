@@ -138,3 +138,12 @@
     background: var(--select);
     color: var(--white);
 }
+
+@media (max-width: 640px) {
+    .window {
+        left: 2vw;
+        top: 1.25rem;
+        width: 96vw;
+        height: min(30rem, 78vh);
+    }
+}

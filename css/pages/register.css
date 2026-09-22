@@ -166,3 +166,30 @@ header p {
 p[role="status"]{
     color: var(--close);
 }
+
+@media (max-width: 720px) {
+    .setup {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        padding: 1.5rem;
+    }
+
+    .setup aside {
+        flex: none;
+    }
+
+    .setup main {
+        max-width: none;
+        align-self: stretch;
+    }
+
+    .credentials {
+        grid-template-columns: 1fr;
+    }
+
+    .avatars {
+        flex-wrap: wrap;
+    }
+}

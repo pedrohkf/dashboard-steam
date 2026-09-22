@@ -170,3 +170,32 @@ footer a {
 footer p {
     font-size: 16px;
 }
+
+@media (max-width: 640px) {
+    main {
+        flex-direction: column;
+    }
+
+    .welcome {
+        align-items: center;
+        justify-content: center;
+        border-right: 0;
+        border-bottom: 1px solid var(--login-line);
+        padding: 1.5rem;
+    }
+
+    .accounts form {
+        padding-left: 0.75rem;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        gap: 0.5rem;
+    }
+
+    footer a,
+    footer p {
+        padding-inline: 1.5rem;
+    }
+}
