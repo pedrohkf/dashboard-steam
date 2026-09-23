@@ -4,6 +4,7 @@ const template = document.querySelector("template");
 const list = document.querySelector(".accounts ul");
 const error = document.querySelector("[role=alert]");
 
+// Clona o <template> do login.html uma vez por usuario cadastrado e monta a lista de contas.
 getUsers().forEach(user => {
     const item = template.content.cloneNode(true);
     const tile = item.querySelector(".user");
@@ -18,6 +19,7 @@ getUsers().forEach(user => {
         e.preventDefault();
         const password = new FormData(form).get("password");
 
+        // Senha errada: mostra alerta e limpa o campo, sem sair da tela.
         if (password !== user.password) {
             error.hidden = false;
             form.reset();
@@ -25,6 +27,7 @@ getUsers().forEach(user => {
             return;
         }
 
+        // Senha certa: grava sessão (usada pelas outras paginas pra saber quem esta logado) e entra.
         setSession({ username: user.username, avatar: user.avatar, steamid: user.steamid, steamName: user.steamName });
         location.href = "desktop.html"
     })
@@ -33,6 +36,7 @@ getUsers().forEach(user => {
 });
 
 
+// Abre o form de senha da conta clicada e fecha o das demais (só uma expandida por vez).
 function openTile(tile) {
     list.querySelectorAll(".user").forEach(t => {
         const isOpen = t === tile;

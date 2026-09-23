@@ -13,6 +13,7 @@
      background-attachment: fixed;
  }
 
+ /* Cabecalho fixo no topo ao rolar a pagina */
  header {
      position: sticky;
      top: 0;
@@ -84,6 +85,7 @@
      font-family: var(--font-title);
  }
 
+ /* Secao hero: sobrescreve o card padrao de main section (sem borda/fundo) */
  #sobre {
      max-width: 56rem;
      margin-inline: auto;
@@ -118,12 +120,14 @@
      border-radius: 7px;
  }
 
+ /* Galeria de prints: grid responsivo, quantas colunas de 18rem couberem */
  .telas {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
      gap: 1.5rem;
  }
 
+ /* Cada print vira uma "janelinha" falsa, com barra de titulo (.tela__bar) e botao fechar */
  .tela {
      overflow: hidden;
      background: var(--white);
@@ -169,6 +173,7 @@
      text-align: center;
  }
 
+ /* Linha do tempo com scroll horizontal proprio (nao rola a pagina toda) */
  .roadmap {
      display: flex;
      overflow-x: auto;
@@ -202,6 +207,7 @@
      padding-top: 1.5rem;
  }
 
+ /* Linha horizontal atras de cada item, conectando um marco ao outro */
  .roadmap li::before {
      content: "";
      position: absolute;
@@ -212,6 +218,7 @@
      background: var(--pane-ink);
  }
 
+ /* Primeiro e ultimo item tem so metade da linha, pra nao sobrar linha solta nas pontas */
  .roadmap li:first-child::before {
      left: 50%;
      width: 50%;
@@ -221,6 +228,7 @@
      width: 50%;
  }
 
+ /* Bolinha (marco) desenhada por cima da linha */
  .roadmap li::after {
      content: "";
      position: absolute;
@@ -246,6 +254,7 @@
      font-size: 12.5px;
  }
 
+ /* .destaque = classe no Windows XP no HTML, marca ele como marco de destaque na timeline */
  .roadmap .destaque::after {
      width: 16px;
      height: 16px;
@@ -303,6 +312,7 @@
      font-size: 12px;
  }
 
+ /* Secao de aviso legal: fundo mais escuro e texto menor pra ficar discreto */
  #aviso {
      background: color-mix(in srgb, var(--face) 85%, black);
      color: #333;
@@ -323,6 +333,7 @@
      border-top: 2px solid var(--luna-edge);
  }
 
+ /* Telas pequenas: menu quebra linha e hero perde padding vertical grande */
  @media (max-width: 640px) {
      header {
          flex-wrap: wrap;

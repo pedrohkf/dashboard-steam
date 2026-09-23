@@ -55,6 +55,7 @@ header p {
     gap: 0.7rem;
 }
 
+/* Icone padrao: passo pendente */
 .setup aside li::before {
     content: "";
     flex: none;
@@ -63,10 +64,12 @@ header p {
     background-image: url("../../public/imgs/icons/step-pending.svg");
 }
 
+/* Passo atual (marcado com aria-current no HTML) ganha icone diferente */
 .setup aside li[aria-current]::before {
     background-image: url("../../public/imgs/icons/step-current.svg");
 }
 
+/* :has(~ [aria-current]) = todo <li> que vem ANTES do atual na lista vira "concluido" */
 .setup aside li:has(~ [aria-current])::before {
     background-image: url("../../public/imgs/icons/step-done.svg");
 }
@@ -125,6 +128,7 @@ header p {
     margin-top: 0.3rem;
 }
 
+/* Radio real fica invisivel por cima da imagem; clique na img funciona porque input+img estao no mesmo label */
 .avatars input {
     position: absolute;
     opacity: 0;
@@ -139,6 +143,7 @@ header p {
     background: var(--white);
 }
 
+/* Avatar selecionado ganha borda azul, ja que o radio em si nao aparece */
 .avatars input:checked+img {
     border: 2px solid var(--select);
     box-shadow: 0 0 0 2px var(--focus-ring);

@@ -1,3 +1,4 @@
+/* Empilha label + input verticalmente com espaco entre eles (usado no register.html e login.html) */
 .label{
     display: flex;
     flex-direction: column;

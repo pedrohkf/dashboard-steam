@@ -1,3 +1,4 @@
+/* Janela estilo XP baseada em <dialog>. [open] = atributo nativo do dialog quando aberto via .show(). */
 .window {
     margin: 0;
     left: 8rem;
@@ -14,11 +15,13 @@
     box-shadow: 2px 3px 10px rgb(0 0 0 / 0.45);
 }
 
+/* dialog fechado ja fica display:none por padrao, so precisa virar flex quando aberto */
 .window[open] {
     display: flex;
     flex-direction: column;
 }
 
+/* Barra de titulo azul gradiente, igual XP */
 .window__bar {
     display: flex;
     flex: none;
@@ -59,11 +62,13 @@
     background: var(--white);
 }
 
+/* Variante escura pra janela da biblioteca Steam */
 .window--steam .window__body {
     background: var(--steam-navy);
     color: var(--steam-mist);
 }
 
+/* Variante com layout de explorador de arquivos (sidebar + lista lado a lado) */
 .window--explorer .window__body{
     display: flex;
     overflow: hidden;
@@ -84,6 +89,7 @@
     background: var(--face); 
 }
 
+/* Barra lateral azul do explorer (menu "Tarefas do sistema" etc) */
 .pane {
     flex: 0 0 11rem;
     padding: 0.75rem 0.5rem;
@@ -117,6 +123,7 @@
 .pane button:hover { text-decoration: underline; }
 
 
+/* Tabela usada na Lixeira , linha destaca ao passar mouse */
 .window table {
     width: 100%;
     border-collapse: collapse;
@@ -139,6 +146,7 @@
     color: var(--white);
 }
 
+/* Telas pequenas, janela ocupa quase tudo em vez de tamanho fixo */
 @media (max-width: 640px) {
     .window {
         left: 2vw;

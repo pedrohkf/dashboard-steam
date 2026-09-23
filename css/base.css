@@ -1,3 +1,4 @@
+/* Reset global: zera espacamento/borda padrao do navegador e tira bullet de listas. */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     list-style: none;
 }
 
+/* Esconde visualmente mas mantem acessivel pra leitor de tela, texto so pra acessibilidade. */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -14,6 +16,7 @@
     clip-path: inset(50%);
 }
 
+/* Garante que [hidden] funcione mesmo em elementos com display: flex/grid nas classes CSS. */
 [hidden] {
     display: none !important;
 }

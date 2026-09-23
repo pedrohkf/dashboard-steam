@@ -14,6 +14,7 @@
 <body>
     <main>
         <h1>Steam <sup>XP</sup></h1>
+        <!--Barra de boot falsa - role=progressbar pra acessibilidade, blocos animados via CSS-->
         <div class="bar" role="progressbar" aria-label="Carregando">
             <div class="blocks"></div>
         </div>
@@ -26,6 +27,7 @@
         <p>Projeto EXAPE</p>
     </footer>
 
+    <!--Simula tempo de boot: espera 3s e manda pra area de trabalho-->
     <script>
         setTimeout(function () {
             window.location.href = "./desktop.html"

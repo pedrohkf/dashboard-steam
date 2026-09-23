@@ -1,3 +1,4 @@
+/* Tela azul (BSOD) - fonte monoespacada e cursor:none imitam terminal de erro do XP */
 body {
     min-height: 100vh;
     background: var(--bsod);
@@ -18,6 +19,7 @@ h1 {
     font: inherit;
 }
 
+/* Cursor piscando de terminal, steps(1) faz o pisco ser abrupto (nao suave) */
 .cursor {
     animation: blink 1s steps(1) infinite;
 }

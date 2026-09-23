@@ -1,3 +1,4 @@
+/* Botao estilo XP: usado tanto em <button> quanto <a>, por isso cursor: default e text-decoration: none. */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -14,13 +15,16 @@
 
     border: 1px solid var(--btn-edge);
     border-radius: 2px;
+    /* gradiente claro-pra-escuro simula relevo do botao classico do Windows */
     background: linear-gradient(180deg, var(--white), var(--face) 88%, color-mix(in srgb, var(--face) 90%, black));
 }
 
+/* Contorno laranja no hover, igual foco visivel do XP */
 .btn:hover{
     box-shadow: inset 0 0 0 2px var(--orange);
 }
 
+/* Fundo mais escuro simula botao "afundando" ao clicar */
 .btn:active{
     background: color-mix(in srgb, var(--face) 90%, black);
     box-shadow: none;

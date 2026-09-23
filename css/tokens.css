@@ -1,4 +1,6 @@
+/* Design tokens: cores/fontes reutilizadas em todo o projeto, imitam a paleta padrao do Windows XP (tema Luna). */
 :root {
+    /* tema Luna (janelas, taskbar, botoes) */
     --luna: #0054E3;
     --luna-hi: #3D95FF;
     --luna-edge: #0831D9;
@@ -25,15 +27,16 @@
     --login-bar: #00309C;
     --login-field: #5A7EDC;
 
-    --bsod: #0000AA;
+    --bsod: #0000AA; /* azul da tela de crash */
 
-    /*steam*/
+    /* tema Steam (janela da biblioteca) */
     --steam-ink: #171A21;
     --steam-navy: #1B2838;
     --steam-slate: #2A475E;
     --steam-sky: #66C0F4;
     --steam-mist: #C7D5E0;
 
+    /* cores soltas usadas em pontos especificos (login, grafico, status) */
     --white: #FFFFFF;
     --pane-hi: #C6D3F7;
     --focus-ring: #98B8F5;
@@ -47,6 +50,7 @@
     --ok: #3A9A2E;
     --warn: #F2A900;
 
+    /* fontes com 2 opcao pra quando o SO nao tem as originais do XP instaladas */
     --font-ui: Tahoma, "Noto Sans", sans-serif;
     --font-title: "Trebuchet MS", "Fira Sans", sans-serif;
     --font-display: "Franklin Gothic Medium", "Libre Franklin", Arial, sans-serif;

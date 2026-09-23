@@ -65,6 +65,7 @@ main {
     background: color-mix(in srgb, var(--white) 15%, transparent);
 }
 
+/* :has olha o botao filho: se aria-expanded=true (definido via JS), destaca o item aberto */
 .accounts li:has([aria-expanded="true"]) {
     background: linear-gradient(90deg, var(--login-bar) 60%, var(--login-field));
     border-color: var(--white);
@@ -102,6 +103,7 @@ main {
     font-weight: 700;
 }
 
+/* padding-left usa a mesma variavel --avatar do botao, pra campo de senha alinhar embaixo do nome (nao do avatar) */
 .accounts form {
     display: flex;
     align-items: flex-end;
@@ -171,6 +173,7 @@ footer p {
     font-size: 16px;
 }
 
+/* Telas pequenas: empilha welcome/accounts em vez de lado a lado */
 @media (max-width: 640px) {
     main {
         flex-direction: column;

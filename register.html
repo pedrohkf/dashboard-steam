@@ -19,6 +19,7 @@
         <p>Steam <i>XP</i> Setup</p>
     </header>
     <div class="setup">
+        <!--Passos do assistente - aria-current marca a etapa atual-->
         <aside>
             <ol>
 
@@ -51,6 +52,7 @@
                     </div>
                 </div>
 
+                <!--Radio group de avatar - name="avatar" igual em todos garante que só um fique marcado-->
                 <fieldset class="avatars">
                     <legend>Escolha uma imagem</legend>
 
@@ -80,12 +82,14 @@
                     </label>
                 </fieldset>
 
+                <!--SteamID exige exatamente 17 digitos - pattern faz a validacao nativa do form-->
                 <div class="label">
                     <label for="key">Chave do produto (seu id steam)</label>
                     <input type="text" id="key" name="steamid" inputmode="numeric" pattern="\d{17}" maxlength="17"
                         placeholder="xxxxxxxxxxxxxxxxx" required>
                 </div>
 
+                <!--Mensagem de status (ex: validando steamid, erro da API) preenchida pelo register.js-->
                 <div>
                     <p role="status"></p>
                 </div>

@@ -12,6 +12,7 @@ body {
     background: url("../../public/imgs/background-wallpaper.png") center / cover no-repeat;
 }
 
+/* Icones da area de trabalho: coluna com wrap, preenche de cima pra baixo e quebra pra proxima coluna */
 .icons {
     display: flex;
     flex-direction: column;
@@ -74,6 +75,7 @@ body {
     font-weight: 700;
 }
 
+/* Grade de jogos: auto-fill cria quantas colunas couberem, cada card min 12rem */
 .games {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -113,6 +115,7 @@ body {
     color: var(--steam-sky);
 }
 
+/* Janela Lixeira nasce deslocada da Steam, pra nao abrir uma em cima da outra */
 .window--trash {
     left: 14rem;
     top: 5rem;

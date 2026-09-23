@@ -14,11 +14,15 @@
 </head>
 
 <body>
+    <!--Fica invisivel e apenas para acessibilidade-->
     <h1 class="sr-only">Área de trabalho</h1>
 
+    <!--Conteudo principal-->
     <main class="desktop">
+        <!--Lista de icones de apps-->
         <ul class="icons">
             <li>
+                <!--possui atributo para com janela ele vai abrir usada no JS-->
                 <button class="icon" type="button" data-open="win-steam">
                     <img src="public/imgs/icons/steam-48.png" alt="">
                     <span>Steam</span>
@@ -31,6 +35,9 @@
                 </button>
             </li>
         </ul>
+
+        <!--Janela do app Steam-->
+        <!--aria-labelledby usa o texto do h2 abaixo como nome acessivel do dialog-->
         <dialog class="window window--steam" id="win-steam" aria-labelledby="win-steam-title">
             <header class="window__bar">
                 <h2 id="win-steam-title">Steam</h2>
@@ -44,20 +51,28 @@
             </div>
         </dialog>
 
+        <!-- Janela do app Lixeira -->
+        <!--aria-labelledby usa o texto do h2 abaixo como nome acessivel do dialog-->
         <dialog class="window window--explorer window--trash" id="win-trash" aria-labelledby="win-trash-title">
+            <!--Cabecalho do app, titutlo e botao de fechar -->
             <header class="window__bar">
                 <h2 id="win-trash-title">Lixeira</h2>
+                <!--fecha dialog sem precisar de JS-->
                 <form method="dialog">
                     <button class="window__close" aria-label="Fechar">&times;</button>
                 </form>
             </header>
+
+            <!--conteudo-->
             <div class="window__body">
+                <!--menu lateral-->
                 <aside class="pane">
                     <h3>Tarefas da Lixeira</h3>
                     <ul>
                         <li><button id="empty-trash">Esvaziar lixeira</button></li>
                     </ul>
                 </aside>
+                <!--Tabela de jogos-->
                 <div class="window__list">
                     <table>
                         <thead>
@@ -71,18 +86,23 @@
                     </table>
                 </div>
             </div>
+            <!--Rodape com soma de jogos-->
             <footer class="window__status">
+                <!--inserir resultados de calculos-->
                 <span><output id="trash-count">0</output> itens</span>
             </footer>
         </dialog>
     </main>
-
+    <!--menu bottom, com menu lateal e horario atual-->
     <nav class="taskbar" aria-label="Barra de tarefas">
+        <!--popovertarget abre/fecha o menu iniciar sem JS-->
         <button class="start" type="button" popovertarget="start-menu">iniciar</button>
         <ul class="task"></ul>
+        <!--datetime vazio de proposito, JS preenche em "tempo real"-->
         <time class="clock" datetime="">--:--</time>
     </nav>
 
+    <!--menu lateral que fica hidden por padroa com popover-->
     <div class="start-menu" id="start-menu" popover>
         <header class="start-menu__user">
             <img alt="">
@@ -91,6 +111,7 @@
 
         <ul class="start-menu__apps">
             <li>
+                <!--popovertargetaction="hide" fecha o menu iniciar ao abrir o app, sem JS-->
                 <button type="button" data-open="win-steam" popovertarget="start-menu" popovertargetaction="hide">
                     <img src="public/imgs/icons/steam-48.png" alt="" width="32" height="32">
                     Steam
@@ -103,7 +124,7 @@
                 </button>
             </li>
         </ul>
-
+        <!--footer do menu, onde possui botoes para sair-->
         <footer class="start-menu__footer">
             <button type="button" id="logoff">
                 <img src="public/imgs/icons/logoff.svg" alt="">Fazer logoff</button>
@@ -114,10 +135,12 @@
         </footer>
     </div>
 
+    <!--template do card de jogo, nao e renderizado aqui no html-->
     <template id="game-template">
         <li><img alt=""><span class="game__name"></span><span class="game__hours"></span></li>
     </template>
 
+    <!--template das linhas da janela de lixeira-->
     <template id="trash-template">
         <tr>
             <td></td>
@@ -126,6 +149,7 @@
         </tr>
     </template>
 
+    <!--JS da pagina de dektop-->
     <script type="module" src="js/pages/desktop.js"></script>
 </body>
 

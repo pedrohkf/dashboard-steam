@@ -20,6 +20,7 @@
             <p>Para comecar, clique no seu nome de usuário</p>
         </section>
 
+        <!--Lista de contas preenchida via JS (login.js), um <li> clonado do template por usuario-->
         <section class="accounts" aria-label="Conta de usuarios">
             <ul></ul>
             <p role="alert" hidden>Senha incorreta</p>
@@ -27,6 +28,7 @@
         </section>
     </main>
     <footer>
+        <!--"desligar" manda pra tela de crash -->
         <a href="crash.html">
             <img src="public/imgs/icons/power.svg" alt="">
             <span>Desligar computador</span>
@@ -35,6 +37,7 @@
             de Usuário</p>
     </footer>
 
+    <!--Molde de cada conta: botao com avatar/nome, form de senha some ate clicar no botao-->
     <template>
         <li>
             <button class="user" type="button" aria-expanded="false">

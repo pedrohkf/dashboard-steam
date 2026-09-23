@@ -1,3 +1,4 @@
+/* Estilo padrao de campo de texto/senha/email - radio fica de fora, tem visual proprio (nao vira caixa). */
 input:not([type="radio"]){
     border: 1px solid black;
     width: 100%;
@@ -5,6 +6,7 @@ input:not([type="radio"]){
     padding: 0.3rem;
 }
 
+/* Borda azul do XP indicando campo focado, ajuda acessibilidade tambem */
 input:focus{
     border: 1.5px solid var(--pane-ink);
 }

@@ -1,3 +1,4 @@
+/* Tela de boot preta, igual BIOS antes do XP carregar */
 body {
     background: var(--post);
     display: flex;
@@ -26,6 +27,7 @@ main sup {
     font-size: 28px;
 }
 
+/* Moldura da barra de progresso, overflow:hidden corta o bloco animado nas bordas */
 .bar {
     width: 15rem;
     height: 1.3rem;
@@ -38,6 +40,7 @@ main sup {
     overflow: hidden;
 }
 
+/* Bloco azul unico que desliza da esquerda pra direita, repetindo sem fim (loading falso, sem % real) */
 .blocks {
     width: 3rem;
     height: 75%;
